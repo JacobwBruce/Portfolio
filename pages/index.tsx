@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
+import Navbar from '../components/Navbar';
 
 const cosmic = Cosmic();
 
@@ -19,8 +20,7 @@ export default function Home({ projects, features }) {
                 <meta name='description' content="Jacob Bruce's Software Development Portfolio" />
                 <meta name='keywords' content='Jacob, Bruce, Portfolio, Software Development' />
             </Head>
-
-            <h1>Jacob Bruce</h1>
+            <Navbar />
         </div>
     );
 }

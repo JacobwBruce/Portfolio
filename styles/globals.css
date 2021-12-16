@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#__next {
+    min-height: 100vh;
+}
+
+#navlinks {
+    animation: translate 0.5s;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

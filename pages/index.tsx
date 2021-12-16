@@ -2,7 +2,9 @@ import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
 import Navbar from '../components/Navbar';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import Footer from '../components/Footer';
+import GlobalContext from '../utils/GlobalContext';
 
 const cosmic = Cosmic();
 
@@ -12,7 +14,7 @@ const bucket = cosmic.bucket({
 });
 
 export default function Home({ projects, features }) {
-    const [darkMode, setDarkMode] = useState<boolean>(false);
+    const { darkMode } = useContext(GlobalContext);
 
     return (
         <div className={`h-full ${darkMode && 'dark'}`}>
@@ -25,6 +27,7 @@ export default function Home({ projects, features }) {
             </Head>
             <Navbar />
             <div className='h-full dark:bg-gray-900'></div>
+            <Footer />
         </div>
     );
 }

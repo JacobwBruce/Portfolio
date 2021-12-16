@@ -56,7 +56,7 @@ const Navbar: FC = () => {
                             <li>
                                 <a
                                     href=''
-                                    className='block w-full py-3 transition hover:text-cyan-600'
+                                    className='block w-full py-3 transition hover:text-blue-600'
                                 >
                                     About
                                 </a>
@@ -64,7 +64,7 @@ const Navbar: FC = () => {
                             <li>
                                 <a
                                     href=''
-                                    className='block w-full py-3 transition hover:text-cyan-600'
+                                    className='block w-full py-3 transition hover:text-blue-600'
                                 >
                                     Projects
                                 </a>
@@ -72,7 +72,7 @@ const Navbar: FC = () => {
                             <li className='mt-4 lg:mt-0'>
                                 <a
                                     href=''
-                                    className='block w-full py-3 px-6 rounded-xl bg-cyan-500 transition hover:bg-cyan-600 focus:bg-cyan-700 active:bg-cyan-800'
+                                    className='block w-full py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800'
                                 >
                                     <span className='block text-center text-white font-semibold lg:text-base'>
                                         Contact me

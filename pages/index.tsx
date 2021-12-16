@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
 import Navbar from '../components/Navbar';
+import { useContext, useState } from 'react';
+import Footer from '../components/Footer';
+import GlobalContext from '../utils/GlobalContext';
 
 const cosmic = Cosmic();
 
@@ -11,8 +14,10 @@ const bucket = cosmic.bucket({
 });
 
 export default function Home({ projects, features }) {
+    const { darkMode } = useContext(GlobalContext);
+
     return (
-        <div className='min-h-screen'>
+        <div className={`h-full ${darkMode && 'dark'}`}>
             <Head>
                 <title>Jacob Bruce</title>
                 <link rel='icon' href='/favicon.ico' />
@@ -21,6 +26,8 @@ export default function Home({ projects, features }) {
                 <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
             </Head>
             <Navbar />
+            <div className='h-full dark:bg-gray-900'></div>
+            <Footer />
         </div>
     );
 }

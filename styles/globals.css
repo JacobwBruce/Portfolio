@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
+/* #__next {
     min-height: 100vh;
-}
+} */
 
 #navlinks {
     animation: translate 0.5s;

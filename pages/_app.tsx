@@ -1,6 +1,8 @@
 import '../styles/globals.css';
 import { useEffect, useState } from 'react';
 import GlobalContext from '../utils/GlobalContext';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }) {
     const [state, setState] = useState({
@@ -13,6 +15,8 @@ function MyApp({ Component, pageProps }) {
             ...state,
             darkMode: JSON.parse(window.localStorage.getItem('darkTheme')),
         });
+
+        Aos.init({ duration: 1000 });
     }, []);
 
     function setDarkMode(flag: boolean) {

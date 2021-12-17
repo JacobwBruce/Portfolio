@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import Footer from '../components/Footer';
 import GlobalContext from '../utils/GlobalContext';
 import Masthead from '../components/Masthead';
+import Projects from '../components/Projects';
 
 const cosmic = Cosmic();
 
@@ -30,6 +31,7 @@ export default function Home({ projects, features }) {
             {/* Body */}
             <div className='dark:bg-gray-900'>
                 <Masthead />
+                <Projects features={features} projects={projects} />
             </div>
 
             <Footer />
@@ -42,14 +44,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
         query: {
             type: 'projects',
         },
-        props: 'slug,title,content,url',
+        props: 'slug,title,content,metadata.url',
     });
     const projects = await projectData.objects;
     const featuresData = await bucket.getObjects({
         query: {
             type: 'features',
         },
-        props: 'slug,title,content,url,thumbnail',
+        props: 'slug,title,content,metadata.url, metadata.thumbnail',
     });
     const features = await featuresData.objects;
     return {

@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import GlobalContext from '../utils/GlobalContext';
 
 function MyApp({ Component, pageProps }) {
@@ -8,9 +8,17 @@ function MyApp({ Component, pageProps }) {
         setDarkMode,
     });
 
+    useEffect(() => {
+        setState({
+            ...state,
+            darkMode: JSON.parse(window.localStorage.getItem('darkTheme')),
+        });
+    }, []);
+
     function setDarkMode(flag: boolean) {
         //set the theme of the app
         setState({ ...state, darkMode: flag });
+        window.localStorage.setItem('darkTheme', JSON.stringify(flag));
     }
 
     return (

@@ -20,3 +20,8 @@ body,
         transform: translateY(0);
     }
 }
+
+.button {
+    @apply text-white block py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800
+                                    shadow-xl shadow-blue-500/50;
+}

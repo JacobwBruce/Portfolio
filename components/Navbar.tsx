@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import NavbarItem from './NavbarItem';
 
 const Navbar: FC = () => {
-    const [hidden, setHidden] = useState<boolean>(false);
+    const [hidden, setHidden] = useState<boolean>(true);
     const [lineClasses, setLineClasses] = useState<string>('');
     const [line2Classes, setLine2Classes] = useState<string>('mt-1.5');
 
@@ -20,7 +20,7 @@ const Navbar: FC = () => {
 
     return (
         <header
-            className='absolute w-full h-16 bg-white shadow-md transition lg:h-20 
+            className='w-full h-16 bg-white shadow-md transition lg:h-20 
         dark:bg-gray-900 dark:text-white dark:shadow-none dark:border-b-2 dark:border-gray-700'
         >
             <nav className='container m-auto py-3 lg:px-20 lg:py-4'>
@@ -54,17 +54,14 @@ const Navbar: FC = () => {
                         id='navlinks'
                         className={`${
                             hidden && 'hidden'
-                        } w-full px-6 bg-white transition lg:block lg:w-auto lg:px-0 lg:bg-transparent shadow-md lg:shadow-none`}
+                        } w-full px-6 bg-white transition lg:block lg:w-auto lg:px-0 lg:bg-transparent shadow-md lg:shadow-none
+                        dark:bg-gray-900 `}
                     >
                         <ul className='py-4 text-gray-600 text-lg tracking-wide lg:flex lg:space-x-8 lg:py-0'>
                             <NavbarItem uri=''>About</NavbarItem>
                             <NavbarItem uri=''>Projects</NavbarItem>
                             <li className='mt-4 lg:mt-0'>
-                                <a
-                                    href=''
-                                    className='block w-full py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800
-                                    shadow-xl shadow-blue-500/50'
-                                >
+                                <a href='' className='button w-full'>
                                     <span className='block text-center text-white font-semibold lg:text-base'>
                                         Contact me
                                     </span>

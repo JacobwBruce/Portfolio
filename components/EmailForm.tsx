@@ -21,7 +21,8 @@ const EmailForm: FC = () => {
         });
         setLoading(false);
 
-        const { error } = await data.json();
+        const response = await data.json();
+        console.log(response);
         // do somethign with error:boolean
     };
 

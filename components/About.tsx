@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 const About: FC = () => {
     return (
-        <div className='container my-5 dark:text-white '>
+        <div id='About' className='container my-5 dark:text-white '>
             <h2 data-aos='fade-up' className='section-heading'>
                 About
             </h2>

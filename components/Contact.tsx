@@ -6,7 +6,7 @@ const Contact: FC = () => {
         <div
             data-aos='flip-right'
             className='dark:text-white text-center pb-5 w-screen'
-            id='contact'
+            id='Contact'
         >
             <h2 className='section-heading'>Contact</h2>
 

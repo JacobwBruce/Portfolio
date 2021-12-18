@@ -58,10 +58,10 @@ const Navbar: FC = () => {
                         dark:bg-gray-900 `}
                     >
                         <ul className='py-4 text-gray-600 text-lg tracking-wide lg:flex lg:space-x-8 lg:py-0'>
-                            <NavbarItem uri=''>About</NavbarItem>
-                            <NavbarItem uri=''>Projects</NavbarItem>
+                            <NavbarItem uri='#About'>About</NavbarItem>
+                            <NavbarItem uri='#Projects'>Projects</NavbarItem>
                             <li className='mt-4 lg:mt-0'>
-                                <a href='' className='button w-full'>
+                                <a href='#Contact' className='button w-full'>
                                     <span className='block text-center text-white font-semibold lg:text-base'>
                                         Contact me
                                     </span>

@@ -10,7 +10,7 @@ interface Props {
 
 const Projects: FC<Props> = ({ projects, features }) => {
     return (
-        <div className='container py-5 dark:text-white'>
+        <div id='Projects' className='container py-5 dark:text-white'>
             <h2 data-aos='fade-up' className='section-heading w-screen'>
                 Projects
             </h2>

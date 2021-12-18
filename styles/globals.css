@@ -29,3 +29,7 @@ body,
 .section-heading {
     @apply text-center text-4xl mb-4 font-bold;
 }
+
+.form-input {
+    @apply w-full block py-1.5 px-3 rounded-lg border-2 border-gray-300 dark:bg-gray-900 dark:border-gray-700 dark:focus:outline-none dark:text-white;
+}

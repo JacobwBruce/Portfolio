@@ -24,7 +24,7 @@ const About: FC = () => {
                 <p>
                     I also enjoying breaking things in <strong>TypeScript, Java, Python,</strong>{' '}
                     and <strong>C#</strong>, and do most of my projects with <strong>React</strong>{' '}
-                    and <strong>Node.js</strong> (including this one).
+                    or <strong>Next.js</strong> (including this one).
                 </p>
             </div>
         </div>

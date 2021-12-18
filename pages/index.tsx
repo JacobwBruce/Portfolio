@@ -2,12 +2,13 @@ import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
 import Navbar from '../components/Navbar';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Footer from '../components/Footer';
 import GlobalContext from '../utils/GlobalContext';
 import Masthead from '../components/Masthead';
 import Projects from '../components/Projects';
 import About from '../components/About';
+import Contact from '../components/Contact';
 
 const cosmic = Cosmic();
 
@@ -36,6 +37,7 @@ export default function Home({ projects, features }) {
                     <About />
                 </div>
                 <Projects features={features} projects={projects} />
+                <Contact />
             </div>
 
             <Footer />

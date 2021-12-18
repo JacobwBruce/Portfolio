@@ -23,7 +23,7 @@ body,
 
 .button {
     @apply text-white block py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800
-                                    shadow-xl shadow-blue-500/50;
+                                    shadow-xl shadow-blue-500/50 disabled:bg-blue-800 disabled:shadow-blue-800/50;
 }
 
 .section-heading {

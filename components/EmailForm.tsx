@@ -1,11 +1,28 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const EmailForm: FC = () => {
     const { register, handleSubmit } = useForm();
+    const [loading, setLoading] = useState<boolean>(false);
 
-    const onSubmit = ({ name, email, message }) => {
-        //send email
+    const onSubmit = async ({ name, email, message }) => {
+        setLoading(true);
+        const data = await fetch('/api/sendEmail', {
+            method: 'post',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                message,
+            }),
+        });
+        setLoading(false);
+
+        const { error } = await data.json();
+        // do somethign with error:boolean
     };
 
     return (
@@ -43,8 +60,8 @@ const EmailForm: FC = () => {
                     ></textarea>
                 </div>
                 <div className='flex justify-center'>
-                    <button type='submit' className='button'>
-                        Submit
+                    <button type='submit' className='button' disabled={loading}>
+                        {loading ? 'Loading...' : 'Send'}
                     </button>
                 </div>
             </form>

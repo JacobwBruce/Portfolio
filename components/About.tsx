@@ -13,7 +13,7 @@ const About: FC = () => {
                 </p>
 
                 <p>
-                    I recently worked as a <strong>Java Learning Assitant</strong> with Sheridan
+                    I recently worked as a <strong>Java Learning Assistant</strong> with Sheridan
                     College, where I got the oppurtunity to teach and aid students in their
                     programming courses, predominately in <strong>Java</strong> and{' '}
                     <strong>Spring Boot</strong>. Through coaching and collaboration with students

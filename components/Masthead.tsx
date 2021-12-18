@@ -17,11 +17,6 @@ const Masthead: FC = () => {
                 </div>
             </div>
             <Image src={me} alt='me' height={500} width={500} />
-            {/* <img
-                src={me}
-                alt='Me'
-                className='w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1'
-            ></img> */}
         </div>
     );
 };

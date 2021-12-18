@@ -25,3 +25,7 @@ body,
     @apply text-white block py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800
                                     shadow-xl shadow-blue-500/50;
 }
+
+.section-heading {
+    @apply text-center text-4xl mb-4 font-bold;
+}

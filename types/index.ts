@@ -11,6 +11,9 @@ export interface Feature {
     content: string;
     metadata: {
         url: string;
-        thumbnail: string;
+        thumbnail: {
+            url: string;
+            imgix_url: string;
+        };
     };
 }

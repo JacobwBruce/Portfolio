@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import GlobalContext from '../utils/GlobalContext';
 import Masthead from '../components/Masthead';
 import Projects from '../components/Projects';
+import About from '../components/About';
 
 const cosmic = Cosmic();
 
@@ -31,6 +32,9 @@ export default function Home({ projects, features }) {
             {/* Body */}
             <div className='dark:bg-gray-900'>
                 <Masthead />
+                <div className=' flex flex-col items-center'>
+                    <About />
+                </div>
                 <Projects features={features} projects={projects} />
             </div>
 

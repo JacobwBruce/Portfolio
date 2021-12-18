@@ -2,9 +2,13 @@ import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
 import Navbar from '../components/Navbar';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Footer from '../components/Footer';
 import GlobalContext from '../utils/GlobalContext';
+import Masthead from '../components/Masthead';
+import Projects from '../components/Projects';
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 const cosmic = Cosmic();
 
@@ -17,7 +21,7 @@ export default function Home({ projects, features }) {
     const { darkMode } = useContext(GlobalContext);
 
     return (
-        <div className={`h-full ${darkMode && 'dark'}`}>
+        <div className={`${darkMode && 'dark'}`}>
             <Head>
                 <title>Jacob Bruce</title>
                 <link rel='icon' href='/favicon.ico' />
@@ -26,7 +30,16 @@ export default function Home({ projects, features }) {
                 <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
             </Head>
             <Navbar />
-            <div className='h-full dark:bg-gray-900'></div>
+            {/* Body */}
+            <div className='dark:bg-gray-900'>
+                <Masthead />
+                <div className=' flex flex-col items-center'>
+                    <About />
+                </div>
+                <Projects features={features} projects={projects} />
+                <Contact />
+            </div>
+
             <Footer />
         </div>
     );
@@ -37,14 +50,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
         query: {
             type: 'projects',
         },
-        props: 'slug,title,content,url',
+        props: 'slug,title,content,metadata.url',
     });
     const projects = await projectData.objects;
     const featuresData = await bucket.getObjects({
         query: {
             type: 'features',
         },
-        props: 'slug,title,content,url,thumbnail',
+        props: 'slug,title,content,metadata.url, metadata.thumbnail',
     });
     const features = await featuresData.objects;
     return {

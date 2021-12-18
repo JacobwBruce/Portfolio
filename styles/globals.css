@@ -5,7 +5,7 @@
 html,
 body,
 #__next {
-    height: 100%;
+    min-height: 100%;
 }
 
 #navlinks {
@@ -19,4 +19,17 @@ body,
     100% {
         transform: translateY(0);
     }
+}
+
+.button {
+    @apply text-white block py-3 px-6 rounded-xl bg-blue-500 transition hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800
+                                    shadow-xl shadow-blue-500/50 disabled:bg-blue-800 disabled:shadow-blue-800/50;
+}
+
+.section-heading {
+    @apply text-center text-4xl mb-4 font-bold;
+}
+
+.form-input {
+    @apply w-full block py-1.5 px-3 rounded-lg border-2 border-gray-300 dark:bg-gray-900 dark:border-gray-800 dark:focus:outline-none dark:text-white;
 }

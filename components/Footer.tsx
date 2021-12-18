@@ -8,8 +8,8 @@ const Footer: FC = () => {
     const { setDarkMode } = useContext(GlobalContext);
 
     return (
-        <footer className='relative py-3 border-t-2 border-gray-200 dark:bg-gray-900 dark:text-white dark:border-gray-700'>
-            <div className='flex flex-col-reverse items-center gap-y-4 justify-around sm:flex-row'>
+        <footer className='relative pb-6 border-t-2 border-gray-200 dark:bg-gray-900 dark:text-white dark:border-gray-700'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 space-y-4 justify-items-center items-end'>
                 <div>
                     <small className='pre-wrap'>Copyright © jacobbruce.ca 2021</small>
                 </div>

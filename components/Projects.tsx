@@ -10,7 +10,7 @@ interface Props {
 
 const Projects: FC<Props> = ({ projects, features }) => {
     return (
-        <div id='Projects' className='container py-5 dark:text-white'>
+        <div id='Projects' className='container py-5 dark:text-white px-5 md:px-0'>
             <h2 data-aos='fade-up' className='section-heading w-screen'>
                 Projects
             </h2>
@@ -31,7 +31,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                                 alt={`${feature.title}-thumbnail`}
                             />
                             <div>
-                                <h4 className='text-xl font-semibold'>{feature.title}</h4>
+                                <h4 className='text-xl font-semibold py-5 md:py-0'>{feature.title}</h4>
                                 <div dangerouslySetInnerHTML={{ __html: feature.content }} />
                                 <a
                                     className='text-blue-500'
@@ -57,7 +57,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                     >
                         <h5
                             data-aos='fade-right'
-                            className='justify-self-start md:justify-self-end'
+                            className='justify-self-start md:justify-self-end font-bold md:font-normal py-4 md:py-0'
                         >
                             {project.title}
                         </h5>
@@ -65,7 +65,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                             <div dangerouslySetInnerHTML={{ __html: project.content }} />
 
                             <a
-                                className='text-blue-500'
+                                className='text-blue-500 pt-4 md:pt-0'
                                 href={project.metadata.url}
                                 target='__blank'
                             >

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Masthead: FC = () => {
     return (
-        <div className='flex flex-wrap md:flex-nowrap justify-center'>
+        <div className='flex flex-wrap md:flex-nowrap justify-center pt-5 px-0 md:px-5 md:pt-0'>
             <div className='flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36'>
                 <h1 className='font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left dark:text-white'>
                     Fullstack

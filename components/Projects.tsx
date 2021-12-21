@@ -61,7 +61,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                         >
                             {project.title}
                         </h5>
-                        <div data-aos='fade-left' className=''>
+                        <div data-aos='fade-right' className=''>
                             <div dangerouslySetInnerHTML={{ __html: project.content }} />
 
                             <a

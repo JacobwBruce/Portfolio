@@ -10,12 +10,12 @@ interface Props {
 
 const Projects: FC<Props> = ({ projects, features }) => {
     return (
-        <div id='Projects' className='container py-5 dark:text-white px-5 md:px-0'>
+        <div id='Projects' className='container py-5 dark:text-white'>
             <h2 data-aos='fade-up' className='section-heading w-screen'>
                 Projects
             </h2>
 
-            <div>
+            <div className=''>
                 <h4 data-aos='fade-right' className='text-center text-2xl my-10 font-bold w-screen'>
                     Featured Projects
                 </h4>
@@ -23,7 +23,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                     {features.map((feature, index) => (
                         <div
                             key={`feature-${index}`}
-                            className='grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-20 items-center'
+                            className='grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-20 items-center px-5'
                         >
                             <img
                                 className='w-full md:w-9/12 justify-self-start md:justify-self-end'
@@ -52,7 +52,7 @@ const Projects: FC<Props> = ({ projects, features }) => {
                 </h4>
                 {projects.map((project, index) => (
                     <div
-                        className='grid grid-cols-1 md:grid-cols-2 mb-4 gap-x-10'
+                        className='grid grid-cols-1 md:grid-cols-2 mb-4 gap-x-10 px-5'
                         key={`project-${index}`}
                     >
                         <h5

@@ -24,16 +24,22 @@ export default function Home({ projects, features }) {
         <div className={`${darkMode && 'dark'}`}>
             <Head>
                 <title>Jacob Bruce</title>
-                <link rel='icon' href='/favicon.ico' />
-                <meta name='description' content="Jacob Bruce's Software Development Portfolio" />
-                <meta name='keywords' content='Jacob, Bruce, Portfolio, Software Development' />
-                <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
+                <link rel="icon" href="/favicon.ico" />
+                <meta
+                    name="description"
+                    content="Jacob Bruce's Software Development Portfolio"
+                />
+                <meta
+                    name="keywords"
+                    content="Jacob, Bruce, Portfolio, Software Development"
+                />
+                <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             </Head>
             <Navbar />
             {/* Body */}
-            <div className='dark:bg-gray-900'>
+            <div className="dark:bg-gray-900">
                 <Masthead />
-                <div className=' flex flex-col items-center'>
+                <div className=" flex flex-col items-center">
                     <About />
                 </div>
                 <Projects features={features} projects={projects} />

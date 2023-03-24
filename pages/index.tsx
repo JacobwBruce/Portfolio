@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Cosmic from 'cosmicjs';
 import { GetStaticProps } from 'next';
 import Navbar from '../components/Navbar';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Footer from '../components/Footer';
 import GlobalContext from '../utils/GlobalContext';
 import Masthead from '../components/Masthead';
@@ -19,6 +19,12 @@ const bucket = cosmic.bucket({
 
 export default function Home({ projects, features }) {
     const { darkMode } = useContext(GlobalContext);
+
+    useEffect(() => {
+        alert(
+            'Due to Heroku pricing changes, some of these projects no longer work'
+        );
+    }, []);
 
     return (
         <div className={`${darkMode && 'dark'}`}>
